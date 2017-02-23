@@ -1,0 +1,59 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<listener>
+		<listener-class>authdemo.HibernateInitContextListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>AuthServlet</servlet-name>
+		<servlet-class>authdemo.AuthServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AuthServlet</servlet-name>
+		<url-pattern>/auth.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HeaderClassServlet</servlet-name>
+		<servlet-class>authdemo.HeaderClass</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HeaderClassServlet</servlet-name>
+		<url-pattern>/head.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowMessages</servlet-name>
+		<servlet-class>authdemo.ShowMessages</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowMessages</servlet-name>
+		<url-pattern>/show.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegistrationServlet</servlet-name>
+		<servlet-class>authdemo.model.Registration</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegistrationServlet</servlet-name>
+		<url-pattern>/reg.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>authdemo.Logout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	<listener>
+		<listener-class>
+			authdemo.HibernateInitContextListener
+		</listener-class>
+	</listener>
+</web-app>
